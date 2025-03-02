@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Probe Questions</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ask about Space Probes!</h1>
+    <input type="text" id="questionInput" placeholder="Question?">
+    <button onclick="askQuestion()">Submit</button>
+    <div id="response"></div>
+
+    <script>
+        const GOOGLE_API_KEY = 'AIzaSyDYy-LGOx5kxo63_bVZNLPoYzzcONJgG0c';
+    
+        function askQuestion() {
+            const question = document.getElementById('questionInput').value.toLowerCase();
+
+            const spaceProbeTerms = [
+                'space probe', 'probe', 'space', 'planet', 'moon', 'juno', 'cassini', 'voyager',
+                'new horizons', 'mars', 'rover', 'curiosity', 'opportunity', 'spirit', 'perseverance', 
+                'insight', 'phoenix', 'pathfinder', 'galileo', 'hubble', 'kepler'
+            ];
+
+            const isSpaceProbeQuestion = spaceProbeTerms.some(term => question.includes(term));
+
+            if (!isSpaceProbeQuestion) {
+                document.getElementById('response').innerText = "Please ask a question about space probes!";
+                return;
+            }
+
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GOOGLE_API_KEY}`;
+            
+            const requestBody = {
+                contents: [{
+                    parts: [{
+                        text: question
+                    }]
+                }]
+            };
+    
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestBody),
+            })
+            .then(response => response.json())
+            .then(data => {
+                const responseText = data.candidates[0].content.parts[0].text;
+                document.getElementById('response').innerText = `Answer: ${responseText}`;
+            })
+            .catch(error => {
+                document.getElementById('response').innerText = 'Error: ' + error;
+            });
+        }
+    </script>
+</body>
+</html>

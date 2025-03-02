@@ -1,0 +1,194 @@
+
+
+.info-box {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    display: none;
+    pointer-events: auto;
+    width: 150px;
+}
+.info-box button {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.info-box button:hover {
+    background: #0056b3;
+}
+
+
+
+
+
+
+h1 {font-family: serif;
+    font-size: 3em;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+    text-align: center;
+   }
+
+h2  {font-family: serif;
+     font-size: 250%;
+     color: white;
+     text-align: center; 
+   }
+
+h3  {font-family: serif;
+    font-size: 3em;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+    text-align: center;
+   }
+
+h4 {font-family: serif;
+    font-size: 3em;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+    text-align: center;
+   }
+
+
+ol {color: white;
+    margin-left:29%;
+  }
+
+
+h1:hover { font-style: italic;
+          background-color: #5D5C61;
+          color: white;
+        }
+
+h2:hover { font-style: italic;
+          background-color: #5D5C61;
+          color: white;
+        }
+
+h3:hover { font-style: italic;
+           background-color: #B80F0A ;
+           color: white; }
+
+h4:hover { font-style: italic;
+           background-color: #006400 ;
+           color: white; }
+
+
+
+
+
+.aligncenter {text-align: center;
+             }
+
+.one {color:white;
+  text-align: center;
+ }
+
+.two {color:white;
+  margin-left: 25%;
+   }
+
+.three {color: white;
+   margin-left: 30%;
+   }
+
+.four {color: #A91B0D;
+   }
+
+.link {color: #A91B0D;
+   }
+
+.white {color: white;
+  }
+
+
+
+
+
+
+
+#navbar {
+ overflow: hidden;
+ background-color: #333;
+}
+
+
+#navbar a {
+ float: left;
+ display: block;
+ color: #f2f2f2;
+ text-align: center;
+ padding: 14px;
+ text-decoration: none;
+}
+
+
+.sticky {
+ position: fixed;
+ top: 0;
+ width: 100%;
+}
+
+.sticky + .content {
+ padding-top: 60px;
+}
+
+#navbar a:hover {
+ background-color: #ddd;
+ color: black;
+}
+
+
+#navbar a.active {
+ background-color: #4CAF50;
+ color: white;
+} 
+
+
+
+* {
+ box-sizing: border-box;
+}
+
+
+.left70 {
+ width: 50%;
+}
+
+.right30 {
+ width: 50%;
+}
+
+.row:after {
+ content: "";
+ display: table;
+ clear: both;
+}
+
+.columns {
+ float: left;
+ padding: 10px; 
+}
+
+.column {
+ float: left;
+ width: 33.3%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
