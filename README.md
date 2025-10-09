@@ -11,7 +11,9 @@ The project was uncompleted due to lack of time: whilst the designs for more pro
 As a bonus: by implementing the Google AIP for answering the user's questions, we were granted their first prize!
 
 
-#To use
+
+
+~ To use ~
 
 Download the file and open "indexquatre.html"
 
