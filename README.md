@@ -8,7 +8,7 @@ Planets, probes and background were entirely designed by us.
 
 The project was uncompleted due to lack of time: whilst the designs for more probes were already made, the pages were not set up for planets other than Pluto.
 
-As a bonus: by implementing the Google AIP for answering the user's questions, we were granted their first prize!
+As a bonus: by implementing the Gemini API for answering the user's questions, we were granted their first prize!
 
 
 
